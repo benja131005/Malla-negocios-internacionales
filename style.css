@@ -1,0 +1,60 @@
+:root {
+  --pink: #ffb6c1;
+  --pink-dark: #ff6fa1;
+  --pink-light: #ffe6ec;
+  --gray: #cccccc;
+  --green: #a0e7a0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #ffffff;
+  color: #333;
+  margin: 0;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+h1 {
+  margin-top: 2rem;
+  color: var(--pink-dark);}
+
+.malla {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+  max-width: 1400px;
+  margin: 2rem auto 4rem;
+}
+
+.course {  
+  background: var(--pink-light);
+  border: 2px solid var(--pink-dark);
+  border-radius: 8px;
+  padding: 1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: transform 0.1s ease, filter 0.2s ease;
+}
+
+.course:hover {
+  transform: scale(1.03);
+}
+.course:disabled {
+  background: var(--gray);
+  border-color: #999;
+  color: #666;
+  cursor: not-allowed;
+  filter: grayscale(40%);
+}
+
+.course.completed {
+  background: var(--green);
+  border-color: #3d9b3d;
+  color: #000;
+}
+.course:disabled {
